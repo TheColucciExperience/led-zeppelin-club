@@ -1,0 +1,33 @@
+{
+  "name": "led-zeppelin-club",
+  "version": "1.0.0",
+  "description": "A SPA made for Led Zeppelin fans",
+  "main": "  ",
+  "scripts": {
+    "test": "  "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheColucciExperience/led-zeppelin-club.git"
+  },
+  "keywords": [
+    "Led",
+    "Zeppelin",
+    "Club",
+    "Rock"
+  ],
+  "author": "The Colucci Experience",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheColucciExperience/led-zeppelin-club/issues"
+  },
+  "homepage": "https://github.com/TheColucciExperience/led-zeppelin-club#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
+    "angular": "^1.6.9",
+    "angular-animate": "^1.6.9",
+    "angular-aria": "^1.6.9",
+    "angular-route": "^1.6.9",
+    "bootstrap": "^4.0.0"
+  }
+}
