@@ -1,2 +1,26 @@
 
 // Mixins for Led Zeppelin Club
+
+// Buttons
+
+@mixin ledButton($color: #111, $hoverColor: #eee) {	
+	border: 1px solid $color;
+	padding: .6rem 1.2rem;
+	font: {
+		family: $primaryFont;
+		size: 1.2rem;
+	}	
+	text-transform: uppercase;
+	letter-spacing: .02rem;
+	color: $color;
+	background-color: transparent;
+	text-decoration: none;
+	transition-duration: .35s;
+	&:focus { outline: 1px solid $color; }
+	@media (min-width: 768px) {
+		&:hover {
+			color: $hoverColor;
+			border-color: $hoverColor;
+		}
+	}
+}

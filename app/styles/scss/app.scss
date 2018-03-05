@@ -1,19 +1,23 @@
 
 // Main styles for Led Zeppelin Club
 
-// Importing fonts, colors, animations, etc.
+// Importing colors
 
-@import 'fonts';
 @import 'colors';
-@import 'animations';
-@import 'mixins';
 
 // Default settings for body
 
 body {
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
-	color: $primaryColor;
+	overflow: hidden;	
 	background-color: $secondaryColor;
+}
+
+// Settings for main content views
+
+main {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
 }

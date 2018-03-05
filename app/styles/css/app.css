@@ -12,7 +12,11 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  color: #eec310;
   background-color: #111; }
+
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh; }
 
 /*# sourceMappingURL=app.css.map */

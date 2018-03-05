@@ -17,6 +17,8 @@
 
 		<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css"/>
 		<link rel="stylesheet" href="app/styles/css/app.css"/>
+		<link rel="stylesheet" href="app/intro/intro.css"/>
+		<link rel="stylesheet" href="app/core/background/background.css"/>
 
 		<!-- Font Awesome icons -->
 
@@ -40,10 +42,16 @@
 		<script src="node_modules/angular-animate/angular-animate.js"></script>
 		<script src="node_modules/angular-aria/angular-aria.js"></script>
 
+		<!-- App -->
+
+		<script src="app/app.module.js"></script>		
+		<script src="app/app.config.js"></script>
+
 		<!-- Core -->
 
-		<script src="app/app.module.js"></script>
-		<script src="app/app.config.js"></script>
+		<script src="app/core/background/background.component.js"></script>	
+		<script src="app/core/directives/timeout-visibility.directive.js"></script>
+		<script src="app/core/factories/images-loader.factory.js"></script>	
 
 	</body>
 </html>

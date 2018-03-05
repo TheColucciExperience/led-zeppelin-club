@@ -23,7 +23,28 @@ angular.module( 'ledZepClub' )
 
 				$routeProvider
 					.when( '/', {
-						template: '<h1>Led Zeppelin Club</h1>'
+						templateUrl: 'app/intro/intro.template.html',
+						resolve: {
+							imgsLoaded: [
+								'imagesLoaderFactory', 
+								function loadImages(imagesLoaderFactory) {
+									return imagesLoaderFactory.loadImages(
+										'app/images/backgrounds/intro-background.jpg'
+									);
+								}
+							]
+						},
+						// We must use the resolved version to allow DI
+						resolveRedirectTo: [
+							'$window',
+							function checkUserRoute($window) {
+								
+								if ( $window.localStorage.userData ) {
+									return '/home';
+								}
+
+							}
+						]
 					} )
 
 			}

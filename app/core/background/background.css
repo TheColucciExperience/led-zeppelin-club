@@ -1,0 +1,21 @@
+.bg-container {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .bg-container div {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    opacity: .7; }
+
+/*# sourceMappingURL=background.css.map */
