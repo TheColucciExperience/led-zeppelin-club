@@ -18,40 +18,74 @@
 		<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css"/>
 		<link rel="stylesheet" href="app/styles/css/app.css"/>
 		<link rel="stylesheet" href="app/intro/intro.css"/>
-		<link rel="stylesheet" href="app/core/background/background.css"/>
+		<link rel="stylesheet" href="app/register/register.css"/>
+		<link rel="stylesheet" 
+		href="app/core/components/led-background/led-background.css"/>
 
 		<!-- Font Awesome icons -->
 
 		<script src="/node_modules/@fortawesome/fontawesome/index.js"></script>
+
+		<!-- Base url reference -->
 	
 		<base href="/"/>
 
 	</head>
 	<body>
 
+		<h1 class="sr-only">
+			Led Zeppelin Club - The place for Zeppelin fans
+		</h1>
+
 		<!-- Views container -->
 
-		<ng-view></ng-view>
+		<div class="view-animate-container">
+			<ng-view class="view-animate"></ng-view>
+		</div>		
 
-		<!-- Scripts -->
+		<!-- *** Scripts -->
 
-		<!-- Angular -->		
+		<!-- ** Angular -->		
 
 		<script src="node_modules/angular/angular.js"></script>
 		<script src="node_modules/angular-route/angular-route.js"></script>
 		<script src="node_modules/angular-animate/angular-animate.js"></script>
 		<script src="node_modules/angular-aria/angular-aria.js"></script>
 
-		<!-- App -->
+		<!-- ** App -->
 
 		<script src="app/app.module.js"></script>		
 		<script src="app/app.config.js"></script>
 
-		<!-- Core -->
+		<!-- ** Core -->
 
-		<script src="app/core/background/background.component.js"></script>	
+		<!-- Components -->
+
+		<script	src="app/core/components/led-background/led-background.module.js">	
+		</script>
+		<script src="app/core/components/led-background/led-background.component.js">
+		</script>
+
+		<!-- Directives -->
+
+		<script src="app/core/directives/core-directives.module.js"></script>
 		<script src="app/core/directives/timeout-visibility.directive.js"></script>
-		<script src="app/core/factories/images-loader.factory.js"></script>	
+
+		<!-- Factories -->
+
+		<script src="app/core/factories/images-loader/images-loader.module.js">		
+		</script>
+		<script src="app/core/factories/images-loader/images-loader.factory.js">	
+		</script>
+		<script src="app/core/factories/user-manager/user-manager.module.js">		
+		</script>
+		<script src="app/core/factories/user-manager/user-manager.factory.js">	
+		</script>
+
+		<!-- ** Partials -->
+
+		<script src="app/register/register.module.js"></script>
+		<script src="app/register/register.controller.js"></script>		
 
 	</body>
 </html>

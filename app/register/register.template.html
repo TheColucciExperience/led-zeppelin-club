@@ -1,0 +1,79 @@
+<main class="register-container full-page">
+
+	<h2 class="sr-only">Led Zeppelin Club - Register User</h2>
+
+	<led-background url="app/images/backgrounds/register-background.jpg"></led-background>
+
+	<!-- Form Box -->
+
+	<section>
+
+		<h3>Join The Club</h3>
+
+		<form name="registerForm" ng-submit="register.registerUser()" novalidate>
+
+			<div>
+
+				<label class="sr-only" for="userName">Insert your username</label>
+				<input id="userName" type="text" name="userName" placeholder="Username"
+				ng-model="register.model.user.username" required/>
+				<div class="form-feedback-container">
+					<span class="form-text" ng-show="registerForm.userName.$touched &&
+					registerForm.userName.$error.required">
+						Username is required
+					</span>
+				</div>			
+
+			</div>
+
+			<div>
+
+				<label class="sr-only" for="password">Insert your password</label>
+				<input id="password" type="password" name="password" 
+				placeholder="Password" ng-model="register.model.user.password" 				
+				ng-blur="register.updatePasswordsValidity()" required/>
+				<div class="form-feedback-container">
+					<span class="form-text" ng-show="registerForm.password.$touched &&
+					registerForm.password.$error.required">
+						Password is required
+					</span>
+				</div>		
+
+			</div>
+
+			<div>
+
+				<label class="sr-only" for="passwordConfirm">
+					Insert your password
+				</label>
+				<input id="passwordConfirm" type="password" name="passwordConfirm"	
+				placeholder="Confirm Password" 
+				ng-model="register.model.user.passwordConfirm" 				
+				ng-blur="register.updatePasswordsValidity()" required/>
+				<div class="form-feedback-container">
+					<span class="form-text" ng-show="registerForm.passwordConfirm.$touched 
+					&& registerForm.passwordConfirm.$error.required">
+						Password confirmation is required
+					</span>
+					<span class="form-text" ng-show="register.model.user.password &&
+					register.model.user.passwordConfirm && !register.model.form.passwordsValid">
+						Passwords must match
+					</span>
+				</div>				
+
+			</div>
+
+			<div>
+				<button type="submit" ng-disabled="registerForm.$invalid || 
+				!register.model.form.passwordsValid"
+				ng-class="{ 'button-disabled': registerForm.$invalid || 
+				!register.model.form.passwordsValid }">
+					Register
+				</button>
+			</div>
+
+		</form>
+
+	</section>
+
+</main>

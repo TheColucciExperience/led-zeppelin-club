@@ -8,15 +8,56 @@
     opacity: 1; }
   to {
     opacity: 0; } }
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #111; }
-
-main {
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(0, 5rem); }
+  to {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate(-5rem, 0); }
+  to {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@keyframes enterView {
+  0% {
+    transform: translate(100vw, 0) scale(0.8, 0.7); }
+  50% {
+    transform: translate(0, 0) scale(0.8, 0.7); }
+  100% {
+    transform: translate(0, 0) scale(1, 1); } }
+@keyframes leaveView {
+  0% {
+    transform: translate(0, 0) scale(1, 1); }
+  50% {
+    transform: translate(0, 0) scale(0.8, 0.7); }
+  100% {
+    transform: translate(-100vw, 0) scale(0.8, 0.7); } }
+body,
+.view-animate-container,
+.full-page {
   position: relative;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #111; }
+
+.full-page {
+  background-color: transparent; }
+
+.view-animate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: center; }
+  .view-animate.ng-enter {
+    animation: enterView 1s ease forwards; }
+  .view-animate.ng-leave {
+    animation: leaveView 1s ease forwards; }
 
 /*# sourceMappingURL=app.css.map */

@@ -29,7 +29,8 @@ angular.module( 'ledZepClub' )
 								'imagesLoaderFactory', 
 								function loadImages(imagesLoaderFactory) {
 									return imagesLoaderFactory.loadImages(
-										'app/images/backgrounds/intro-background.jpg'
+										'app/images/backgrounds/intro-background.jpg',
+										'app/images/backgrounds/register-background.jpg'
 									);
 								}
 							]
@@ -45,6 +46,11 @@ angular.module( 'ledZepClub' )
 
 							}
 						]
+					} )
+					.when( '/register', {
+						templateUrl: 'app/register/register.template.html',
+						controller: 'RegisterController',
+						controllerAs: 'register'
 					} )
 
 			}

@@ -12,41 +12,45 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-flow: column wrap;		
+	flex-flow: column wrap;
 	padding: 1rem;
-	text-align: center;	
-	> section > h2 {
+	text-align: center;
+	> section {
 		position: relative;
-		font: {
-			family: $primaryFont;
-			size: 3rem;
+		z-index: 100;
+		> h3 {
+			position: relative;
+			font: {
+				family: $primaryFont;
+				size: 3rem;
+			}
+			color: $primaryColor;
+			opacity: 0;
+			animation: fadeInUp 1.2s cubic-bezier(.17, .67, .18, .98) forwards;
+			@media (min-width: 768px) {
+				font-size: 4rem;
+				@media (min-width: 992px) { font-size: 5rem; }
+			}
 		}
-		color: $primaryColor;
-		opacity: 0;
-		animation: fadeInUp 1.2s cubic-bezier(.17, .67, .18, .98) forwards;
-		@media (min-width: 768px) {
-			font-size: 4rem;
-			@media (min-width: 992px) { font-size: 5rem; }
-		}		
-	}
-	> section > p {
-		position: relative;
-		margin-bottom: 2.5rem;
-		font: {
-			family: $secondaryFont;
-			size: 1.1rem;
-		}		
-		color: #ddd;
-		opacity: 0;
-		animation: 
-			fadeInRight 1s cubic-bezier(.17, .67, .18, .98) .6s forwards;
-	}
-	> section > a {
-		@include ledButton(#fff, $primaryColor);
-		visibility: hidden;
-		opacity: 0;		
-		animation: fadeIn .8s cubic-bezier(.17, .67, .18, .98) 1.2s forwards;
-	}
+		> p {
+			position: relative;
+			margin-bottom: 2.5rem;
+			font: {
+				family: $secondaryFont;
+				size: 1.1rem;
+			}		
+			color: #ddd;
+			opacity: 0;
+			animation: 
+				fadeInRight 1s cubic-bezier(.17, .67, .18, .98) .6s forwards;
+		}
+		> a {
+			@include ledButton(#fff, $primaryColor);
+			visibility: hidden;
+			opacity: 0;		
+			animation: fadeIn .8s cubic-bezier(.17, .67, .18, .98) 1.2s forwards;
+		}
+	}	
 }
 
 // For background fade in effect

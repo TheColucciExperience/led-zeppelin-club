@@ -1,7 +1,7 @@
 
 // Timeout directive to show an element on desired time
 
-angular.module( 'ledZepClub' )
+angular.module( 'coreDirectives' )
 	.directive(
 		'timeoutVisibility',
 		[

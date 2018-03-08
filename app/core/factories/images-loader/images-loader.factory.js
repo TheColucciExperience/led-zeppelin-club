@@ -1,7 +1,7 @@
 
 // This factory will force the browser to load images before we display them
 
-angular.module( 'ledZepClub' )
+angular.module( 'imagesLoader' )
 	.factory(
 		'imagesLoaderFactory',
 		[

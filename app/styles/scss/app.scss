@@ -1,23 +1,38 @@
 
 // Main styles for Led Zeppelin Club
 
-// Importing colors
+// Importing colors and animations
 
 @import 'colors';
+@import 'animations';
 
-// Default settings for body
+// Default settings for body and views animation container
 
-body {
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;	
-	background-color: $secondaryColor;
-}
-
-// Settings for main content views
-
-main {
+body,
+.view-animate-container {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
+	overflow-x: hidden;
+	background-color: $secondaryColor;
+}
+
+// Styles for full page content views
+
+.full-page {
+	@extend .view-animate-container;
+	background-color: transparent;
+}
+
+// Animation styles for view transitions
+
+.view-animate {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform-origin: center;
+	&.ng-enter { animation: enterView 1s ease forwards; }
+	&.ng-leave { animation: leaveView 1s ease forwards; }
 }

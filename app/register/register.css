@@ -1,0 +1,131 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(0, 5rem); }
+  to {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate(-5rem, 0); }
+  to {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@keyframes enterView {
+  0% {
+    transform: translate(100vw, 0) scale(0.8, 0.7); }
+  50% {
+    transform: translate(0, 0) scale(0.8, 0.7); }
+  100% {
+    transform: translate(0, 0) scale(1, 1); } }
+@keyframes leaveView {
+  0% {
+    transform: translate(0, 0) scale(1, 1); }
+  50% {
+    transform: translate(0, 0) scale(0.8, 0.7); }
+  100% {
+    transform: translate(-100vw, 0) scale(0.8, 0.7); } }
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition-duration: 1s; }
+  .register-container > section {
+    position: relative;
+    z-index: 100;
+    flex: 1;
+    max-width: 28rem; }
+    .register-container > section > h3 {
+      margin-bottom: 1.5rem;
+      font-family: "Bowlby One SC", cursive;
+      font-size: 2rem;
+      text-align: center;
+      color: #d6af0e; }
+      @media (min-width: 576px) {
+        .register-container > section > h3 {
+          font-size: 2.5rem; } }
+    .register-container > section > form {
+      padding: 1.5rem .6rem 1.4rem;
+      background-color: rgba(34, 34, 34, 0.7);
+      box-shadow: 1px 2px 1px rgba(17, 17, 17, 0.7); }
+      @media (min-width: 576px) {
+        .register-container > section > form {
+          padding-right: 1rem;
+          padding-left: 1rem; } }
+      .register-container > section > form input {
+        width: 100%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: .2rem;
+        padding-left: .2rem;
+        font-family: "Oswald", sans-serif;
+        color: #fff;
+        background-color: transparent; }
+        .register-container > section > form input::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          color: #999; }
+        .register-container > section > form input::-moz-placeholder {
+          /* Firefox 19+ */
+          color: #999; }
+        .register-container > section > form input:-ms-input-placeholder {
+          /* IE 10+ */
+          color: #999; }
+        .register-container > section > form input:-moz-placeholder {
+          /* Firefox 18- */
+          color: #999; }
+        .register-container > section > form input:focus {
+          outline: none;
+          color: #fff;
+          background-color: transparent; }
+      .register-container > section > form span {
+        padding-left: .2rem;
+        font-family: "Oswald", sans-serif;
+        color: #fff; }
+      .register-container > section > form > div:not(:last-child) {
+        margin-bottom: .4rem; }
+      .register-container > section > form > div:last-child {
+        padding-top: 1rem;
+        text-align: center; }
+        .register-container > section > form > div:last-child > button {
+          border: 1px solid #fff;
+          padding: 0.4rem 1rem;
+          font-family: "Bowlby One SC", cursive;
+          font-size: 1rem;
+          text-transform: uppercase;
+          letter-spacing: .02rem;
+          color: #fff;
+          background-color: transparent;
+          text-decoration: none;
+          transition-duration: .35s;
+          cursor: pointer; }
+          .register-container > section > form > div:last-child > button:focus {
+            outline: 1px solid #fff; }
+          @media (min-width: 768px) {
+            .register-container > section > form > div:last-child > button:hover {
+              color: #d6af0e;
+              border-color: #d6af0e; } }
+
+.form-feedback-container {
+  height: 1.8rem;
+  overflow: hidden;
+  padding-top: .1rem; }
+
+.button-disabled {
+  color: #aaa !important;
+  border-color: #aaa !important; }
+
+/*# sourceMappingURL=register.css.map */

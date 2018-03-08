@@ -7,13 +7,30 @@ angular.module(
 	'ledZepClub',
 	[
 
-		// Angular dependencies
+		// *** Angular dependencies
 
 		'ngRoute',
 		'ngAnimate',
-		'ngAria'
+		'ngAria',
 
-		// Project's dependencies
+		// *** Project's dependencies
+
+		// ** Core directives
+
+		'coreDirectives',
+
+		// ** Components
+
+		'ledBackground',
+
+		// ** Factories
+
+		'imagesLoader',
+		'userManager',
+
+		// ** Partials
+
+		'register'
 
 	]
 )

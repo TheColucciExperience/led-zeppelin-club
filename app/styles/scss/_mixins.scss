@@ -3,12 +3,17 @@
 
 // Buttons
 
-@mixin ledButton($color: #111, $hoverColor: #eee) {	
+@mixin ledButton(
+	$color: #111,
+	$hoverColor: #eee,
+	$fontSize: 1.2rem,
+	$padding: .6rem 1.2rem
+) {	
 	border: 1px solid $color;
-	padding: .6rem 1.2rem;
+	padding: $padding;
 	font: {
 		family: $primaryFont;
-		size: 1.2rem;
+		size: $fontSize;
 	}	
 	text-transform: uppercase;
 	letter-spacing: .02rem;
@@ -16,11 +21,27 @@
 	background-color: transparent;
 	text-decoration: none;
 	transition-duration: .35s;
+	cursor: pointer;
 	&:focus { outline: 1px solid $color; }
 	@media (min-width: 768px) {
 		&:hover {
 			color: $hoverColor;
 			border-color: $hoverColor;
 		}
+	}
+}
+
+@mixin ledPlaceholderColor($color: #444) {
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: $color;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+	  color: $color;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+	  color: $color;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+	  color: $color;
 	}
 }

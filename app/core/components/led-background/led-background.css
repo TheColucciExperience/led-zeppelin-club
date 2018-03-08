@@ -1,6 +1,6 @@
 .bg-container {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 0;
   left: 0;
   width: 100vw;
@@ -10,7 +10,7 @@
   background-repeat: no-repeat; }
   .bg-container div {
     position: absolute;
-    z-index: -1;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100vw;
@@ -18,4 +18,4 @@
     background: #111;
     opacity: .7; }
 
-/*# sourceMappingURL=background.css.map */
+/*# sourceMappingURL=led-background.css.map */

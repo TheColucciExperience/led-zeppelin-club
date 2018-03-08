@@ -1,0 +1,99 @@
+
+// Styles for register view
+
+// Importing components
+
+@import '../styles/scss/fonts';
+@import '../styles/scss/colors';
+@import '../styles/scss/animations';
+@import '../styles/scss/mixins';
+
+// Styles for register container
+
+.register-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	padding: 1rem;
+	transition-duration: 1s;	
+	> section {
+		position: relative;
+		z-index: 100;
+		flex: 1;
+		max-width: 28rem;
+		> h3 {
+			margin-bottom: 1.5rem;
+			font: {
+				family: $primaryFont;
+				size: 2rem;
+			}
+			text-align: center;
+			color: $primaryColor;
+			@media (min-width: 576px) {
+				font-size: 2.5rem;
+			}
+		}
+		> form {			
+			padding: 1.5rem .6rem 1.4rem;
+			background-color: transparentize(#222, .3);
+			box-shadow: 1px 2px 1px transparentize(#111, .3);
+			@media (min-width:576px) {
+				padding: {
+					right: 1rem;
+					left: 1rem;
+				}
+			}			
+			input {
+				// For styling placeholder text color
+				@include ledPlaceholderColor(#999);
+				width: 100%;
+				border: {
+					top: none;
+					left: none;
+					right: none;
+					bottom: 1px solid #ddd;
+				}				
+				padding: {
+					bottom: .2rem;
+					left: .2rem;
+				}
+				font-family: $secondaryFont;
+				color: #fff;
+				background-color: transparent;
+				&:focus {
+					outline: none;
+					color: #fff;
+					background-color: transparent;
+				}
+			}
+			span {				
+				padding-left: .2rem;
+				font-family: $secondaryFont;
+				color: #fff;				
+			}			
+			> div:not(:last-child) { margin-bottom: .4rem; }
+			> div:last-child {
+				padding-top: 1rem;
+				text-align: center;
+				> button {
+					@include ledButton(#fff, $primaryColor, 1rem, .4rem 1rem);					
+				}
+			}			
+		}
+	}	
+}
+
+// Height for form feedback container
+
+.form-feedback-container {
+	height: 1.8rem;
+	overflow: hidden;
+	padding-top: .1rem;	
+}
+
+// Class to show button color feedback for disabled statte
+
+.button-disabled {
+	color: #aaa !important;
+	border-color: #aaa !important;
+}
