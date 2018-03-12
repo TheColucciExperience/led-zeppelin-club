@@ -1,10 +1,10 @@
 
-angular.module( 'register', [ 'userManager' ] )
+angular.module( 'register' )
 	.controller(
 		'RegisterController',
 		[
-			'$rootScope', '$location', 'userManagerFactory',
-			function setCtrl($rootScope, $location, userManagerFactory) {
+			'$location', 'userManagerFactory',
+			function setCtrl($location, userManagerFactory) {
 
 				// For bindings
 

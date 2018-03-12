@@ -1,6 +1,8 @@
 
 // Mixins for Led Zeppelin Club
 
+@import 'colors';
+
 // Buttons
 
 @mixin ledButton(
@@ -30,6 +32,17 @@
 		}
 	}
 }
+
+// Defaults for custom buttons
+
+@mixin ledCustomButton {	
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	&:focus { outline: 1px solid $primaryColor; }
+}
+
+// Changing input placeholder color
 
 @mixin ledPlaceholderColor($color: #444) {
 	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */

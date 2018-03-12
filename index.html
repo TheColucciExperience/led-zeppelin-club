@@ -19,8 +19,20 @@
 		<link rel="stylesheet" href="app/styles/css/app.css"/>
 		<link rel="stylesheet" href="app/intro/intro.css"/>
 		<link rel="stylesheet" href="app/register/register.css"/>
+		<link rel="stylesheet" href="app/home/home.css"/>
+		<link rel="stylesheet" href="app/led-carousel/led-carousel.css"/>
+		<link rel="stylesheet" href="app/led-card/led-card.css"/>
+
+		<!-- Core styles -->
+
 		<link rel="stylesheet" 
 		href="app/core/components/led-background/led-background.css"/>
+		<link rel="stylesheet" 
+		href="app/core/components/led-navbar/led-navbar.css"/>
+		<link rel="stylesheet" 
+		href="app/core/components/led-footer/led-footer.css"/>
+		<link rel="stylesheet" 
+		href="app/core/partials/detail/detail.css"/>
 
 		<!-- Font Awesome icons -->
 
@@ -59,12 +71,25 @@
 
 		<!-- ** Core -->
 
+		<!-- Partials -->
+
+		<script src="app/core/partials/detail/detail.module.js"></script>
+		<script src="app/core/partials/detail/detail.controller.js"></script>		
+
 		<!-- Components -->
 
 		<script	src="app/core/components/led-background/led-background.module.js">	
 		</script>
 		<script src="app/core/components/led-background/led-background.component.js">
 		</script>
+		<script	src="app/core/components/led-navbar/led-navbar.module.js">
+		</script>
+		<script src="app/core/components/led-navbar/led-navbar.component.js">
+		</script>
+		<script src="app/core/components/led-navbar/navbar-toggler.directive.js">
+		</script>
+		<script src="app/core/components/led-footer/led-footer.module.js"></script>
+		<script src="app/core/components/led-footer/led-footer.component.js"></script>
 
 		<!-- Directives -->
 
@@ -81,11 +106,30 @@
 		</script>
 		<script src="app/core/factories/user-manager/user-manager.factory.js">	
 		</script>
+		<script src="app/core/factories/item-fetcher/item-fetcher.module.js">		
+		</script>
+		<script src="app/core/factories/item-fetcher/item-fetcher.factory.js">	
+		</script>
+
+		<!-- Filters -->
+
+		<script src="app/core/filters/item/item.module.js"></script>
+		<script src="app/core/filters/item/item.filter.js"></script>
 
 		<!-- ** Partials -->
 
 		<script src="app/register/register.module.js"></script>
-		<script src="app/register/register.controller.js"></script>		
+		<script src="app/register/register.controller.js"></script>
+		<script src="app/home/home.module.js"></script>
+		<script src="app/home/home.controller.js"></script>
+
+		<!-- ** Specific components -->
+
+		<script src="app/led-carousel/led-carousel.module.js"></script>
+		<script src="app/led-carousel/led-carousel.component.js"></script>
+		<script src="app/led-carousel/animate-carousel.directive.js"></script>
+		<script src="app/led-card/led-card.module.js"></script>
+		<script src="app/led-card/led-card.component.js"></script>
 
 	</body>
 </html>

@@ -1,0 +1,80 @@
+
+// Getting style components
+
+@import '../styles/scss/fonts';
+@import '../styles/scss/colors';
+@import '../styles/scss/animations';
+@import '../styles/scss/mixins';
+
+.home-container > header {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-color: $secondaryColor;
+}
+
+// Slice decoration for header
+
+.header-slice-decoration {
+	position: absolute;
+	z-index: 150;
+	top: 0;
+	right: 0;
+	width: 35vw;
+	height: 120vh;	
+	box-shadow: -3px 0 transparentize( #111, .35 );
+	background-color: transparentize( #111, .4 );
+}
+
+// Styles for header title
+
+.header-title-box {
+	position: relative;
+	z-index: 200;
+	width: 80vw;	
+	max-width: 34rem;
+	margin: {
+		right: 5vw;
+		bottom: 20vh;
+	}
+	padding: 1rem;
+	font-family: $primaryFont;
+	color: $primaryColor;
+	background-color: $secondaryColor;
+	box-shadow: 1px 2px 1px transparentize(#111, .3);
+	& > h3 { font-size: 2rem; }
+	@media (min-width: 576px) {
+		width: 65vw;
+		margin-right: 10vw;
+		& > h3 { font-size: 3rem; }
+		@media (min-width: 992px) {
+			max-width: 44rem;
+			& > h3 { font-size: 4rem; }
+		}
+	}	
+}
+
+// Styles for cards container in grid display
+
+.cards-container {
+	position: relative;
+	z-index: 200;
+	display: grid;
+	height: 200vh;
+	grid-template: repeat(4, 1fr) / 200vh;
+	box-shadow: 0 -1px 2px #111;
+	overflow: hidden;
+	@media(min-width: 576px) {
+		height: auto;
+		grid-template: 60vh 80vh / repeat(10, 1fr);
+		// Grid area for individual cards
+		.card-area-1 { grid-area: 1 / 1 / 1 / span 6; }
+		.card-area-2 { grid-area: 1 / 7 / 1 / span 4; }
+		.card-area-3 { grid-area: 2 / 1 / 2 / span 5; }
+		.card-area-4 { grid-area: 2 / 6 / 2 / span 5; }
+	}	
+}

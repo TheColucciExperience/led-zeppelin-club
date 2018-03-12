@@ -1,0 +1,133 @@
+
+// Importing fonts, colors, animations and mixins
+
+@import '../../../styles/scss/fonts';
+@import '../../../styles/scss/colors';
+@import '../../../styles/scss/animations';
+@import '../../../styles/scss/mixins';
+
+.detail-container {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	@media (min-width: 576px) {
+		flex-flow: row nowrap;
+		min-height: 100vh;		
+	}
+}
+
+.detail-background-box {	
+	position: relative;
+	z-index: 50;
+	height: 65vh;
+	width: 100vw;	
+	@media (min-width: 576px) {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 50vw;
+		height: 100vh;
+		@media (min-width: 768px) {			
+			transition: all .5s ease;
+			&:hover {
+				z-index: 100;
+				width: 55vw;
+				box-shadow: 2px 0 1px transparentize(#111, .3);
+				& > .detail-background-filter { opacity: 0; }
+			}
+			@media (min-width: 992px) {
+				&:hover { width: 53vw; }
+			}
+		}
+	}
+}
+
+.detail-background-image {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: {
+		position: top center;
+		size: cover;
+		repeat: no-repeat;		
+	}
+}
+
+.detail-background-filter {
+	@extend .detail-background-image;	
+	background-color: #111;
+	opacity: 0;
+	transition: all .5s ease;
+	@media (min-width: 768px) { opacity: .6; }
+}
+
+.detail-info {
+	position: relative;
+	z-index: 50;
+	padding: 1rem;
+	background-color: transparentize($secondaryColor, .7);
+	@media (min-width: 576px) {
+		width: 50vw;
+		margin-left: auto;		
+		padding-top: 5rem;
+		@media (min-width: 768px) {
+			padding: {
+				right: 1.5rem;
+				left: 1.5rem;
+			}
+			opacity: .6;
+			transition: all .45s ease;
+			&:hover {
+				z-index: 100;
+				width: 55vw;
+				box-shadow: -2px 0 1px transparentize(#111, .3);
+				opacity: 1;
+			}
+			@media (min-width: 992px) {
+				padding: {
+					right: 2.2rem;
+					left: 2.2rem;
+				}
+				&:hover { width: 53vw; }
+			}
+		}
+	}
+	> h3 {
+		max-width: 15rem;
+		margin: {
+			right: auto;
+			left: auto;
+		}
+		padding: .3rem;
+		font-family: $primaryFont;
+		text-align: center;
+		color: #fff;
+		background-color: #333;
+		box-shadow: 1px 2px 1px #111;
+		transform: translate(0, -2rem) rotate(3deg);
+		> span { transform: rotate(-2deg); }
+		@media (min-width: 576px) {
+			margin-bottom: 3rem;
+			transform: rotate(3deg);
+		}
+	}
+	> section {
+		margin-bottom: 1rem;
+		> h4 {
+			font-family: $primaryFont;
+			color: $primaryColor;
+		}
+		> p {
+			font-family: $secondaryFont;
+			color: #fff;
+			max-width: 30rem;			
+		}
+		@media (min-width: 576px) {
+			margin-bottom: 2rem;
+			@media (min-width: 768px) { transition-duration: .45s; }
+		}
+	}	
+}

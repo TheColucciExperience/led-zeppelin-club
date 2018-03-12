@@ -1,0 +1,60 @@
+
+// Importing necessary default styles
+
+@import '../styles/scss/colors';
+@import '../styles/scss/fonts';
+
+.led-card {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	background-color: $secondaryColor;	
+	@media (min-width: 768px) {
+		&:hover > h4 { transform: none; }
+		&:hover > div { transform: scale(.95, .95); }
+	}
+	> a {
+		position: absolute;
+		z-index: 50;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		&:focus { outline: 1px solid $primaryColor }		
+	}
+	> div {
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background: {			
+			position: -35vw -10vh;
+			repeat: no-repeat;
+			size: cover;			
+		}
+		transition: transform .6s ease;
+		transform-origin: top right;
+		@media (min-width: 576px) { background-position: top center; }
+	}
+	> h4 {
+		position: absolute;
+		z-index: 20;
+		bottom: 5vh;
+		left: 5vw;
+		padding: .5rem;
+		font-family: $primaryFont;
+		color: #fff;
+		background-color: $secondaryColor;
+		box-shadow: 1px 2px 1px transparentize(#111, .3);		
+		@media (min-width: 768px) {
+			transition: transform .6s ease;
+			transform: translate(0, 30vh);
+			@media (min-width: 992px) { font-size: 2rem; }
+		}		
+	}
+}

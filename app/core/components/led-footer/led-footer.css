@@ -1,0 +1,62 @@
+footer {
+  position: relative;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 2rem 2rem;
+  background-color: #222;
+  box-shadow: 0 -2px 1px rgba(17, 17, 17, 0.9); }
+  @media (min-width: 576px) {
+    footer {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem; } }
+  footer h5 {
+    color: #eee;
+    font-family: "Bowlby One SC", cursive;
+    font-size: 1.5rem;
+    text-transform: uppercase; }
+  footer a {
+    margin-left: 1rem;
+    font-family: "Oswald", sans-serif;
+    color: #ccc; }
+    footer a:focus {
+      outline: 1px solid #d6af0e; }
+    @media (min-width: 768px) {
+      footer a {
+        transition-duration: .45s; }
+        footer a:hover {
+          color: #fff; } }
+
+.tcxp-box {
+  max-width: 30rem;
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: .4rem;
+  text-align: center;
+  background-color: #444;
+  box-shadow: 1px 2px 1px #111;
+  transform: rotate(-5deg); }
+  @media (min-width: 992px) {
+    .tcxp-box {
+      margin-left: 0;
+      padding: .6rem; } }
+  .tcxp-box > h5 > a {
+    color: #fff;
+    font-family: "Bowlby One SC", cursive;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transform: rotate(2deg); }
+    .tcxp-box > h5 > a:focus {
+      outline: 1px solid #d6af0e; }
+    @media (min-width: 768px) {
+      .tcxp-box > h5 > a {
+        transition-duration: .45s; }
+        .tcxp-box > h5 > a:hover {
+          text-decoration: none;
+          color: #d6af0e; } }
+  @media (min-width: 768px) and (min-width: 992px) {
+    .tcxp-box > h5 > a {
+      font-size: 1.7rem; } }
+
+/*# sourceMappingURL=led-footer.css.map */

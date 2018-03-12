@@ -19,13 +19,13 @@ angular.module( 'imagesLoader' )
 						// Creating deferred and img
 
 						const deferred = $q.defer(),
-							img = angular.element( '<img/>' );
+							img = document.createElement( 'img' );
 
 						// Forcing browser to load image
 
 						img.src = imgSrc;
 
-						img.on( 'load', function resolveImg() {
+						img.addEventListener( 'load', function resolveImg() {							
 							deferred.resolve( imgSrc );
 						} );
 
@@ -33,7 +33,7 @@ angular.module( 'imagesLoader' )
 
 					} );
 
-					return $q.all( [ promisedImgs ] ).then(
+					return $q.all( promisedImgs ).then(
 						function fulfilled(srcsArray) {							
 							return srcsArray;
 						},

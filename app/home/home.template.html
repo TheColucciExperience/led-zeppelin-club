@@ -1,0 +1,27 @@
+<main class="home-container">
+	
+	<h2 class="sr-only">Led Zeppelin Club - Home Page</h2>
+
+	<led-navbar></led-navbar>	
+
+	<header>
+
+		<led-carousel bg-list="::home.carouselImages" animate-carousel>
+		</led-carousel>
+
+		<div class="header-slice-decoration"></div>
+
+		<div class="header-title-box">
+			<h3>Led Zeppelin Club</h3>
+		</div>
+
+	</header>
+
+	<div class="cards-container">
+		<led-card ng-repeat="card in ::home.cards"
+		class="card-area-{{ $index + 1 }}" member-card="::card"></led-card>
+	</div>
+
+	<led-footer></led-footer>
+
+</main>

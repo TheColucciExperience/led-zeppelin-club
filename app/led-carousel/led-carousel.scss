@@ -1,0 +1,36 @@
+
+// Getting animations for fade and zoom effects
+
+@import '../styles/scss/animations';
+@import '../styles/scss/colors';
+
+// Styles for led-carousel
+
+.led-carousel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: $secondaryColor;
+	transform-origin: top left;
+}
+
+.led-carousel > div {
+	@extend .led-carousel;
+	background-color: transparent;
+}
+
+.image-container-1 {
+	z-index: 100;
+	background: {
+		position: center;
+		size: cover;
+		repeat: no-repeat;		
+	}
+}
+
+.image-container-2 {
+	@extend .image-container-1;
+	z-index: 0;	
+}

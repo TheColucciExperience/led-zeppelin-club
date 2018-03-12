@@ -1,0 +1,77 @@
+
+// Importing colors and fonts
+
+@import '../../../styles/scss/colors';
+@import '../../../styles/scss/fonts';
+
+footer {
+	position: relative;
+	z-index: 300;
+	display: flex;
+	justify-content: center;
+	padding: 1.5rem 2rem 2rem;
+	background-color: #222;
+	box-shadow: 0 -2px 1px transparentize(#111, .1);
+	@media (min-width: 576px) {
+		padding: {
+			top: 2.5rem;
+			bottom: 2.5rem;
+		}
+	}
+	h5 {
+		color: #eee;
+		font: {
+			family: $primaryFont;
+			size: 1.5rem;
+		}
+		text-transform: uppercase;
+	}
+	a {
+		margin-left: 1rem;
+		font-family: $secondaryFont;
+		color: #ccc;
+		&:focus { outline: 1px solid $primaryColor; }
+		@media (min-width: 768px) {
+			transition-duration: .45s;
+			&:hover { color: #fff; }
+		}		
+	}
+}
+
+// Styles for TCXP brand box
+
+.tcxp-box {
+	max-width: 30rem;
+	margin: {
+		top: 1rem;
+		right: auto;
+		left: auto;
+	}
+	padding: .4rem;
+	text-align: center;		
+	background-color: #444;
+	box-shadow: 1px 2px 1px #111;
+	transform: rotate(-5deg);
+	@media (min-width: 992px) {		
+		margin-left: 0;
+		padding: .6rem;
+	}
+	> h5 > a {
+		color: #fff;
+		font: {
+			family: $primaryFont;
+			size: 1.5rem;
+		}
+		text-transform: uppercase;
+		transform: rotate(2deg);		
+		&:focus { outline: 1px solid $primaryColor; }
+		@media (min-width: 768px) {
+			transition-duration: .45s;
+			&:hover {
+				text-decoration: none;
+				color: $primaryColor;
+			}
+			@media (min-width: 992px) { font-size: 1.7rem }
+		}		
+	}	
+}

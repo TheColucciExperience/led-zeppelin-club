@@ -1,0 +1,72 @@
+
+// Importing necessary components
+
+@import '../../../styles/scss/fonts';
+@import '../../../styles/scss/colors';
+@import '../../../styles/scss/animations';
+@import '../../../styles/scss/mixins';
+
+nav {
+	position: fixed;
+	z-index: 500;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	padding: .8rem;
+	background-color: transparentize( $secondaryColor, .7 );
+	box-shadow: 1px 2px 1px transparentize(#111, .1);
+	@media (min-width: 576px) { padding: 1rem; }
+	> button {
+		@include ledCustomButton;
+		position: relative;
+		z-index: 100;
+		display: flex;			
+		flex-flow: column wrap;		
+		width: 2.2rem;
+		height: 1.8rem;
+		padding: .3rem;
+		> span {
+			display: block;
+			width: 1.2rem;
+			height: .15rem;			
+			background-color: #fff;
+			transition-duration: .35s;
+			&:nth-child(2) { margin-left: .2rem; }
+			&:last-child { margin-left: .4rem; }
+			&:not(:last-child) { margin-bottom: .25rem; }
+		}
+	}
+	> div {
+		position: fixed;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 100vh;
+		text-align: center;
+		background-color: #333;
+		opacity: 0;
+		> ul > li {
+			> a {
+				font: {
+					family: $primaryFont;
+					size: 1.6rem;
+				}
+				text-transform: uppercase;
+				color: #fff;
+				transition-duration: .35s;
+				@media (min-width: 576px) {
+					// This will stop mobiles simulating hover effects
+					&:hover {
+						color: $primaryColor;
+						text-decoration: none;
+					}
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}	

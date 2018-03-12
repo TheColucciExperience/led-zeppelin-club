@@ -1,0 +1,61 @@
+{
+	"items": [
+		{
+			"id": 1,
+			"name": "Jimmy Page",
+			"link": "/member/jimmy-page",
+			"img": "app/images/cards/jimmy-page-card.jpeg",
+			"info": [
+				{
+					"title": "Page, Jimmy Page",
+					"paragraph": "Page began his career as a studio session musician in London and, by the mid-1960s, alongside Big Jim Sullivan, was one of the most sought-after session guitarists in Britain. He was a member of the Yardbirds from 1966 to 1968. In late 1968, he founded Led Zeppelin."
+				}, {
+					"title": "The Legend",
+					"paragraph": "Page is widely considered to be one of the greatest and most influential guitarists of all time.Rolling Stone magazine has described Page as \"the pontiff of power riffing\" and ranked him number 3 in their list of the \"100 Greatest Guitarists of All Time\". In 2010, he was ranked number two in Gibson's list of \"Top 50 Guitarists of All Time\" and, in 2007, number four on Classic Rock's \"100 Wildest Guitar Heroes\". He was inducted into the Rock and Roll Hall of Fame twice; once as a member of the Yardbirds (1992) and once as a member of Led Zeppelin (1995). Page has been described by Uncut as \"rock's greatest and most mysterious guitar hero\"."
+				}
+			]
+		}, {
+			"id": 2,
+			"name": "John Paul Jones",
+			"link": "/member/john-paul-jones",
+			"img": "app/images/cards/john-paul-jones-card.jpg",
+			"info": [
+				{
+					"title": "More Than Just Zeppelin",
+					"paragraph": " Prior to joining with his colleague Jimmy Page in 1968 to form a new band, Jones had established himself as an accomplished session man and musical arranger, enjoying significant respect from a variety of singers, songwriters, producers, and bands. However, Jones is best known as the bassist for that new band organized by Page, which included vocalist Robert Plant and drummer John Bonham, the English rock band Led Zeppelin. After the 1980 dissolution of Led Zeppelin in the wake of John Bonham's death, Jones developed a solo career and has collaborated with several other musicians across a wide variety of genres. A versatile musician, Jones also plays organ, guitar, koto, lap steel guitars, mandolin, banjo, upright bass, autoharp, violin, ukulele, sitar, cello, continuum and recorder."
+				}, {
+					"title": "Underrated",
+					"paragraph": "According to AllMusic, Jones \"has left his mark on rock & roll music history as an innovative musician, arranger, and director.\" Jones is part of the band Them Crooked Vultures with Josh Homme and Dave Grohl, in which he plays bass guitar, keyboards, and other instruments. In 2014, Jones ranked first on Paste magazine's list of \"20 Most Underrated Bass Guitarists.\""
+				}
+			]
+		}, {
+			"id": 3,
+			"name": "Robert Plant",
+			"link": "/member/robert-plant",
+			"img": "app/images/cards/robert-plant-card.jpg",
+			"info": [
+				{
+					"title": "Wild Vocalist",
+					"paragraph": "A powerful and wide vocal range (particularly evident in his high-pitched vocals) has given him a successful singing career spanning over 50 years. Plant is regarded as one of the greatest singers in the history of rock and roll. In 2006, Heavy Metal magazine Hit Parader named Plant the \"Greatest Metal Vocalist of All Time\". In 2009, Plant was voted \"the greatest voice in rock\" in a poll conducted by Planet Rock. In 2008, Rolling Stone editors ranked him number 15 on their list of the 100 best singers of all time. In 2011, Rolling Stone readers ranked Plant the greatest of all lead singers."
+				}, {
+					"title": "Mystical",
+					"paragraph": "Plant's lyrics with Led Zeppelin were often mystical, philosophical and spiritual, alluding to events in classical and Norse mythology, such as \"Immigrant Song\", which refers to Valhalla and Viking conquests. However, the song \"No Quarter\" is often misunderstood to refer to the god Thor; the song actually refers to Mount Thor (which is named after the god). Another example is \"The Rain Song\"."
+				}
+			]
+		}, {
+			"id": 4,
+			"name": "John Bonham",
+			"link": "/member/john-bonham",
+			"img": "app/images/cards/john-bonham-card.jpg",
+			"info": [
+				{
+					"title": "The Force Behind Zeppelin",
+					"paragraph": "Bonham was esteemed for his speed, power, fast bass-drumming, distinctive sound, and \"feel\" for the groove. He is regarded as one of the greatest and most influential rock drummers of all time. Rolling Stone magazine ranked him number 1 in their list of the \"100 Greatest Drummers of All Time.\""
+				}, {
+					"title": "Joining The Group",
+					"paragraph": "After the retirement of The Yardbirds, guitarist Jimmy Page formed another band and recruited Plant, who in turn suggested Bonham. Page's choices for drummer included Procol Harum's B.J. Wilson, and session drummers Clem Cattini and Aynsley Dunbar. Ginger Baker was also rumoured to be on Page's list. However, on seeing Bonham drum for Tim Rose at a club in Hampstead, north London, in July 1968, Page and manager Peter Grant were convinced he was perfect for the project, first known as the New Yardbirds and later as Led Zeppelin. Bonham was reluctant. Plant sent eight telegrams to Bonham's pub, the \"Three Men in a Boat\", in Bloxwich, which were followed by 40 telegrams from Grant. Bonham was also receiving offers from Joe Cocker and Chris Farlowe but he accepted Grant's offer. He recalled, \"I decided I liked their music better than Cocker's or Farlowe's.\""
+				}
+			]
+		}
+	]
+}

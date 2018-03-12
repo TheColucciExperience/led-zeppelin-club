@@ -22,15 +22,26 @@ angular.module(
 		// ** Components
 
 		'ledBackground',
+		'ledNavbar',
+		'ledFooter',
+		'ledCard',
 
 		// ** Factories
 
 		'imagesLoader',
 		'userManager',
+		'itemFetcher',
 
-		// ** Partials
+		// ** Filters
 
-		'register'
+		'item',
+
+		// ** Partials and specific components
+
+		'register',
+		'home',
+		'detail',
+		'ledCarousel'
 
 	]
 )

@@ -1,2 +1,2 @@
 
-angular.module( 'register', [] );
+angular.module( 'register', [ 'userManager' ] );
