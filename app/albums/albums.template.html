@@ -1,0 +1,21 @@
+<div class="page-container">
+
+	<h2 class="sr-only">Led Zeppelin Club - Albums Page</h2>
+
+	<led-navbar></led-navbar>
+
+	<main class="albums-box">
+
+		<h3 class="sr-only">Led Zeppelin Studio Albums</h3>
+
+		<span ng-repeat="album in ::albums.data">
+			<led-album name="album.name" link="album.link" img="album.img"
+			angle="album.angle"></led-album>
+		</span>
+		
+		
+	</main>
+
+	<led-footer></led-footer>
+	
+</div>

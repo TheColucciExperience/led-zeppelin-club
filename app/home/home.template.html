@@ -1,4 +1,4 @@
-<main class="home-container">
+<div class="home-container page-container">
 	
 	<h2 class="sr-only">Led Zeppelin Club - Home Page</h2>
 
@@ -17,11 +17,17 @@
 
 	</header>
 
-	<div class="cards-container">
-		<led-card ng-repeat="card in ::home.cards"
-		class="card-area-{{ $index + 1 }}" member-card="::card"></led-card>
-	</div>
+	<main>
+
+		<h3 class="sr-only">Led Zeppelin members cards</h3>
+
+		<div class="cards-container">
+			<led-card ng-repeat="card in ::home.cards"
+			class="card-area-{{ $index + 1 }}" member-card="::card"></led-card>
+		</div>
+		
+	</main>	
 
 	<led-footer></led-footer>
 
-</main>
+</div>

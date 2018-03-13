@@ -1,29 +1,35 @@
-<main scroll-animate>
+<div class="page-container">
 
 	<h2 class="sr-only">Led Zeppelin Club - Items Detail Page</h2>
 
 	<led-navbar></led-navbar>
 
-	<div class="detail-container">		
+	<main>
 
-		<div class="detail-background-box">
-			<div class="detail-background-image" 
-			ng-style="detail.bgStyle"></div>
-			<div class="detail-background-filter"></div>
-		</div>
+		<h3 class="sr-only">Led Zeppelin - Item details</h3>
 
-		<article class="detail-info">
-			<h3>
-				<span>{{ detail.item.name }}</span>
-			</h3>
-			<section ng-repeat="section in ::detail.item.info">
-				<h4>{{ section.title }}</h4>
-				<p>{{ section.paragraph }}</p>
-			</section>			
-		</article>
+		<div class="detail-container">		
 
-	</div>	
+			<div class="detail-background-box">
+				<div class="detail-background-image" 
+				ng-style="detail.bgStyle"></div>
+				<div class="detail-background-filter"></div>
+			</div>
+
+			<article class="detail-info">
+				<h3>
+					<span>{{ detail.item.name }}</span>
+				</h3>
+				<section ng-repeat="section in ::detail.item.info">
+					<h4>{{ section.title }}</h4>
+					<p>{{ section.paragraph }}</p>
+				</section>			
+			</article>
+
+		</div>	
+		
+	</main>	
 
 	<led-footer></led-footer>
 
-</main>
+</div>

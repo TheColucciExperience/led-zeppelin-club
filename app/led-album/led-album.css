@@ -81,26 +81,73 @@
     transform: none; }
   to {
     transform: scale(1.3, 1.3); } }
-body,
-.page-container,
-.view-animate-container {
+.led-album {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-  background-color: #111; }
+  display: flex;
+  align-items: flex-end;
+  width: 15rem;
+  height: 15rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 4rem;
+  padding: .4rem; }
+  .led-album:hover {
+    text-decoration: none; }
+  .led-album:focus {
+    outline: 1px solid #d6af0e; }
+  @media (min-width: 576px) {
+    .led-album {
+      margin-right: 1.5rem;
+      margin-left: 1.5rem; } }
+  @media (min-width: 576px) and (min-width: 768px) {
+    .led-album {
+      width: 18rem;
+      height: 18rem;
+      margin-right: 2rem;
+      margin-left: 2rem; }
+      .led-album:hover > .led-album-img {
+        transform: rotate(-16deg); }
+      .led-album:hover > .led-vinyl {
+        transform: translate(7rem, -4rem); }
+      .led-album:hover > h4 {
+        opacity: 1; } }
 
-.view-animate {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform-origin: center; }
-  .view-animate.ng-enter {
-    animation: enterView 1s ease forwards; }
-  .view-animate.ng-leave {
-    z-index: 0;
-    animation: leaveView 1s ease forwards; }
+  .led-album > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .led-album > h4 {
+    position: relative;
+    z-index: 50;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .3rem;
+    font-family: "Bowlby One SC", cursive;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background-color: #111;
+    box-shadow: 1px 2px 1px #111;
+    transition: opacity .5s ease;
+    transform: rotate(-3deg); }
+    @media (min-width: 768px) {
+      .led-album > h4 {
+        opacity: 0;
+        padding: .6rem;
+        font-size: 1.8rem; } }
 
-/*# sourceMappingURL=app.css.map */
+.led-album-img {
+  z-index: 20;
+  transform: rotate(-14deg);
+  box-shadow: 2px 2px 2px #111;
+  transition: transform .5s ease; }
+
+.led-vinyl {
+  z-index: 10;
+  transform: translate(6rem, -2rem);
+  transition: transform .5s ease; }
+
+/*# sourceMappingURL=led-album.css.map */

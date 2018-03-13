@@ -25,6 +25,7 @@ angular.module(
 		'ledNavbar',
 		'ledFooter',
 		'ledCard',
+		'ledAlbum',
 
 		// ** Factories
 
@@ -41,6 +42,7 @@ angular.module(
 		'register',
 		'home',
 		'detail',
+		'albums',
 		'ledCarousel'
 
 	]

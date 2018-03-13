@@ -1,0 +1,32 @@
+
+// Importing style components
+
+@import '../styles/scss/fonts';
+@import '../styles/scss/colors';
+@import '../styles/scss/mixins';
+@import '../styles/scss/animations';
+
+// Styles for albums box
+
+.albums-box {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	width: 100vw;
+	min-height: 100vh;
+	padding-top: 4rem;
+	background: {
+		image: url('../images/backgrounds/albums/albums-background.png');
+		position: center;
+		size: cover;
+		repeat: no-repeat;
+	}
+	@media (min-width: 576px) {
+		@media (min-width: 768px) {
+			padding: {
+				right: 2rem;
+				left: 2rem;
+			}
+		}
+	}	
+}

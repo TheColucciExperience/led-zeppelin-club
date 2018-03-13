@@ -81,26 +81,20 @@
     transform: none; }
   to {
     transform: scale(1.3, 1.3); } }
-body,
-.page-container,
-.view-animate-container {
-  position: relative;
+.albums-box {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
   width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-  background-color: #111; }
+  min-height: 100vh;
+  padding-top: 4rem;
+  background-image: url("../images/backgrounds/albums/albums-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+@media (min-width: 576px) and (min-width: 768px) {
+  .albums-box {
+    padding-right: 2rem;
+    padding-left: 2rem; } }
 
-.view-animate {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform-origin: center; }
-  .view-animate.ng-enter {
-    animation: enterView 1s ease forwards; }
-  .view-animate.ng-leave {
-    z-index: 0;
-    animation: leaveView 1s ease forwards; }
-
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=albums.css.map */
