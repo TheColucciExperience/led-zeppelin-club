@@ -91,6 +91,17 @@ angular.module( 'ledZepClub' )
 												 		}
 												 	);
 								}
+							],
+							memberImages: [
+								'imagesLoaderFactory', 
+								function loadImages(imagesLoaderFactory) {
+									return imagesLoaderFactory.loadImages(
+										'app/images/cards/jimmy-page-card.jpeg',
+										'app/images/cards/john-paul-jones-card.jpg',
+										'app/images/cards/john-bonham-card.jpg',
+										'app/images/cards/robert-plant-card.jpg'
+									);
+								}
 							]
 						}
 					} )

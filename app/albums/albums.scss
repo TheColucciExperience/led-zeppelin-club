@@ -11,9 +11,9 @@
 .albums-box {
 	display: flex;
 	justify-content: space-around;
-	flex-flow: row wrap;
+	flex-flow: row wrap;	
 	width: 100vw;
-	min-height: 100vh;
+	overflow: hidden;			
 	padding-top: 4rem;
 	background: {
 		image: url('../images/backgrounds/albums/albums-background.png');
