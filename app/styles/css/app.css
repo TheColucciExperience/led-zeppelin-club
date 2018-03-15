@@ -90,13 +90,13 @@ body,
   overflow-x: hidden;
   background-color: #111; }
 
-::-webkit-scrollbar {
+body ::-webkit-scrollbar {
   width: 4px; }
 
-::-webkit-scrollbar-track {
+body ::-webkit-scrollbar-track {
   background-color: #333; }
 
-::-webkit-scrollbar-thumb {
+body ::-webkit-scrollbar-thumb {
   background-color: #d6af0e;
   border-radius: 2px; }
 

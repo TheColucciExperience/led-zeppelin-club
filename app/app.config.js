@@ -71,11 +71,10 @@ angular.module( 'ledZepClub' )
 								function loadImages(imagesLoaderFactory) {
 									return imagesLoaderFactory.loadImages(
 										'app/images/backgrounds/home/carousel/carousel-background-1.jpg',
-										'app/images/backgrounds/home/carousel/carousel-background-2.jpg',										
-										'app/images/cards/jimmy-page-card.jpeg',
-										'app/images/cards/john-paul-jones-card.jpg',
-										'app/images/cards/robert-plant-card.jpg',
-										'app/images/cards/john-bonham-card.jpg'
+										'app/images/backgrounds/home/carousel/carousel-background-2.jpg',
+										'app/images/backgrounds/home/carousel/carousel-background-3.jpg',
+										'app/images/backgrounds/home/carousel/carousel-background-4.jpeg',
+										'app/images/backgrounds/home/carousel/carousel-background-5.png'										
 									);
 								}
 							],

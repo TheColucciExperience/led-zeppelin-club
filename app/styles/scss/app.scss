@@ -20,9 +20,9 @@ body,
 
 // Webkit scrollbar customization for body
 
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background-color: #333; }
-::-webkit-scrollbar-thumb {
+body ::-webkit-scrollbar { width: 4px; }
+body ::-webkit-scrollbar-track { background-color: #333; }
+body ::-webkit-scrollbar-thumb {
   background-color: $primaryColor;
   border-radius: 2px;  
 }
