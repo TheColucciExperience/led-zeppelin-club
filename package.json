@@ -23,11 +23,16 @@
   },
   "homepage": "https://github.com/TheColucciExperience/led-zeppelin-club#readme",
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.4",
     "angular": "^1.6.9",
     "angular-animate": "^1.6.9",
     "angular-aria": "^1.6.9",
     "angular-route": "^1.6.9",
     "bootstrap": "^4.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "scripts": {
+    "start": "http-server -a localhost -p 8000"
   }
 }

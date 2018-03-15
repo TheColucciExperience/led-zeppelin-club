@@ -21,9 +21,10 @@
 		<link rel="stylesheet" href="app/register/register.css"/>
 		<link rel="stylesheet" href="app/home/home.css"/>
 		<link rel="stylesheet" href="app/albums/albums.css"/>
+		<link rel="stylesheet" href="app/profile/profile.css"/>
 		<link rel="stylesheet" href="app/led-carousel/led-carousel.css"/>
 		<link rel="stylesheet" href="app/led-card/led-card.css"/>
-		<link rel="stylesheet" href="app/led-album/led-album.css"/>
+		<link rel="stylesheet" href="app/led-album/led-album.css"/>		
 
 		<!-- Core styles -->
 
@@ -34,11 +35,9 @@
 		<link rel="stylesheet" 
 		href="app/core/components/led-footer/led-footer.css"/>
 		<link rel="stylesheet" 
-		href="app/core/partials/detail/detail.css"/>
-
-		<!-- Font Awesome icons -->
-
-		<script src="/node_modules/@fortawesome/fontawesome/index.js"></script>
+		href="app/core/directives/load-indicator/load-indicator.css"/>
+		<link rel="stylesheet" 		
+		href="app/core/partials/detail/detail.css"/>		
 
 		<!-- Base url reference -->
 	
@@ -50,6 +49,8 @@
 		<h1 class="sr-only">
 			Led Zeppelin Club - The place for Zeppelin fans
 		</h1>
+
+		<load-indicator></load-indicator>
 
 		<!-- Views container -->
 
@@ -96,7 +97,8 @@
 		<!-- Directives -->
 
 		<script src="app/core/directives/core-directives.module.js"></script>
-		<script src="app/core/directives/timeout-visibility.directive.js"></script>
+		<script src="app/core/directives/timeout-visibility/timeout-visibility.directive.js"></script>
+		<script src="app/core/directives/load-indicator/load-indicator.directive.js"></script>
 
 		<!-- Factories -->
 
@@ -126,6 +128,8 @@
 		<script src="app/home/home.controller.js"></script>
 		<script src="app/albums/albums.module.js"></script>
 		<script src="app/albums/albums.controller.js"></script>
+		<script src="app/profile/profile.module.js"></script>
+		<script src="app/profile/profile.controller.js"></script>		
 
 		<!-- ** Specific components -->
 

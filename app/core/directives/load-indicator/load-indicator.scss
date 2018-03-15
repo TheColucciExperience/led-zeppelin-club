@@ -1,0 +1,33 @@
+
+// Importing fonts and animations
+
+@import '../../../styles/scss/fonts';
+@import '../../../styles/scss/animations';
+
+.load-indicator {
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	width: 100vw;
+	height: 100vh;
+	&.ng-enter { animation: fadeIn .3s ease forwards; }
+	&.ng-leave { animation: fadeOut .3s ease forwards; }
+	> h3 {
+		margin: {
+			left: 5vw;
+			bottom: 5vh;
+		}
+		padding: .6rem;
+		font: {
+			family: $primaryFont;
+			size: 1.3rem;
+		}
+		color: #fff;
+		background-color: #222;
+		box-shadow: 1px 2px 3px transparentize(#111, .3);
+	}	
+}

@@ -18,6 +18,15 @@ body,
 	background-color: $secondaryColor;
 }
 
+// Webkit scrollbar customization for body
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background-color: #333; }
+::-webkit-scrollbar-thumb {
+  background-color: $primaryColor;
+  border-radius: 2px;  
+}
+
 // Animation styles for view transitions
 
 .view-animate {

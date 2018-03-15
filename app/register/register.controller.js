@@ -16,7 +16,9 @@ angular.module( 'register' )
 					user: {
 						username: '',
 						password: '',
-						passwordConfirm: ''
+						passwordConfirm: '',
+						title: '',
+						description: ''						
 					},
 					form: {						
 						passwordsValid: false

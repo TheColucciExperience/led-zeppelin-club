@@ -1,0 +1,212 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(0, 5rem); }
+  to {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate(-5rem, 0); }
+  to {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@keyframes enterView {
+  0% {
+    transform: translate(100vw, 0) scale(0.8, 0.7); }
+  50% {
+    transform: translate(0, 0) scale(0.8, 0.7); }
+  100% {
+    transform: translate(0, 0) scale(1, 1); } }
+@keyframes leaveView {
+  0% {
+    transform: translate(0, 0) scale(1, 1); }
+  50% {
+    transform: translate(0, 0) scale(0.8, 0.7); }
+  100% {
+    transform: translate(-100vw, 0) scale(0.8, 0.7); } }
+@keyframes animateFirstBar {
+  0% {
+    transform: none; }
+  33% {
+    transform: translate(0.4rem, 0); }
+  66% {
+    width: 1.4rem;
+    transform: translate(0.12rem, 0.35rem); }
+  100% {
+    transform: translate(0.12rem, 0.35rem) rotate(45deg); } }
+@keyframes reverseFirstBar {
+  0% {
+    transform: translate(0.12rem, 0.35rem) rotate(45deg); }
+  33% {
+    width: 1.2rem;
+    transform: translate(0.12rem, 0.35rem); }
+  66% {
+    transform: translate(0.4rem, 0); }
+  100% {
+    transform: none; } }
+@keyframes animateThirdBar {
+  0% {
+    transform: none; }
+  33% {
+    transform: translate(-0.4rem, 0); }
+  66% {
+    width: 1.4rem;
+    transform: translate(-0.28rem, -0.38rem); }
+  100% {
+    transform: translate(-0.28rem, -0.38rem) rotate(-45deg); } }
+@keyframes reverseThirdBar {
+  0% {
+    transform: translate(-0.28rem, -0.38rem) rotate(-45deg); }
+  33% {
+    width: 1.2rem;
+    transform: translate(-0.28rem, -0.38rem); }
+  66% {
+    transform: translate(-0.4rem, 0); }
+  100% {
+    transform: none; } }
+@keyframes zoomIn {
+  from {
+    transform: none; }
+  to {
+    transform: scale(1.3, 1.3); } }
+.profile-box {
+  display: flex;
+  justify-content: space-around;
+  min-height: 100vh;
+  padding: 3rem .5rem 1.5rem;
+  background-color: #fff; }
+
+.profile-img-box > img {
+  display: block;
+  width: 13rem;
+  height: 13rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1rem; }
+
+.profile-img-box > h4 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Bowlby One SC", cursive;
+  color: #333; }
+
+.profile-img-box > input {
+  border: 1px solid #333;
+  padding: 0.3rem 0.6rem;
+  font-family: "Bowlby One SC", cursive;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: .02rem;
+  color: #333;
+  background-color: transparent;
+  text-decoration: none;
+  transition-duration: .35s;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  border: none;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1rem;
+  text-overflow: ellipsis;
+  text-align: center;
+  white-space: nowrap;
+  width: 90%; }
+  .profile-img-box > input:focus {
+    outline: 1px solid #333; }
+  @media (min-width: 768px) {
+    .profile-img-box > input:hover {
+      color: #d6af0e;
+      border-color: #d6af0e; } }
+
+.profile-box > form {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 1.5rem 1rem 1.5rem !important;
+  background-color: #111;
+  box-shadow: 1px 2px 2px rgba(17, 17, 17, 0.7); }
+  .profile-box > form h5 {
+    font-family: "Bowlby One SC", cursive;
+    color: #ccc; }
+    .profile-box > form h5.user-prop-color {
+      color: #fff; }
+    .profile-box > form h5.user-placeholder-color {
+      color: #eee; }
+  .profile-box > form p {
+    font-family: "Oswald", sans-serif;
+    color: #fff; }
+  .profile-box > form input,
+  .profile-box > form textarea {
+    border-radius: 0;
+    color: #111 !important; }
+    .profile-box > form input::-webkit-input-placeholder,
+    .profile-box > form textarea::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #666; }
+    .profile-box > form input::-moz-placeholder,
+    .profile-box > form textarea::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #666; }
+    .profile-box > form input:-ms-input-placeholder,
+    .profile-box > form textarea:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #666; }
+    .profile-box > form input:-moz-placeholder,
+    .profile-box > form textarea:-moz-placeholder {
+      /* Firefox 18- */
+      color: #666; }
+    .profile-box > form input:focus,
+    .profile-box > form textarea:focus {
+      outline: 1px solid #d6af0e; }
+  .profile-box > form input {
+    font-family: "Bowlby One SC", cursive; }
+  .profile-box > form textarea {
+    font-family: "Oswald", sans-serif; }
+  .profile-box > form span {
+    padding-top: .2rem;
+    padding-left: .1rem;
+    font-family: "Oswald", sans-serif;
+    color: #fff; }
+  .profile-box > form button {
+    border: 1px solid #fff;
+    padding: 0.6rem 1.2rem;
+    font-family: "Bowlby One SC", cursive;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .02rem;
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+    transition-duration: .35s;
+    cursor: pointer;
+    display: block;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto; }
+    .profile-box > form button:focus {
+      outline: 1px solid #fff; }
+    @media (min-width: 768px) {
+      .profile-box > form button:hover {
+        color: #d6af0e;
+        border-color: #d6af0e; } }
+    .profile-box > form button.ng-disabled {
+      color: #666;
+      border-color: #666; }
+
+.form-animation.ng-hide.ng-hide-animate {
+  display: none !important; }
+
+/*# sourceMappingURL=profile.css.map */

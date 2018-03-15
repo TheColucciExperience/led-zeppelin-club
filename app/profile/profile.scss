@@ -1,0 +1,111 @@
+
+// Importing default styles
+
+@import '../styles/scss/fonts';
+@import '../styles/scss/colors';
+@import '../styles/scss/animations';
+@import '../styles/scss/mixins';
+
+// Styles for profile box container
+
+.profile-box {
+	display: flex;
+	justify-content: space-around;
+	min-height: 100vh;
+	padding: 3rem .5rem 1.5rem;
+	background-color: #fff;
+}
+
+// Adjusting elements for profile image box
+
+.profile-img-box > img {	
+	display: block;
+	width: 13rem;
+	height: 13rem;
+	margin: {
+		right: auto;
+		left: auto;
+		bottom: 1rem;
+	}
+}
+
+.profile-img-box > h4 {
+	margin-bottom: 1rem;
+	text-align: center;
+	font-family: $primaryFont;
+	color: #333;
+}
+
+.profile-img-box > input {
+	@include ledButton(#333, $primaryColor, .8rem, .3rem .6rem);
+	display: block;
+	overflow: hidden;
+	border: none;
+	margin: {
+		right: auto;
+		left: auto;
+		bottom: 1rem;
+	}
+	text-overflow: ellipsis;
+	text-align: center;
+	white-space: nowrap;
+	width: 90%;
+}
+
+// Styles for profile box form
+
+.profile-box > form {	
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	padding: 1.5rem 1rem 1.5rem !important;
+	background-color: #111;
+	box-shadow: 1px 2px 2px transparentize(#111, .3);
+	h5 {
+		font-family: $primaryFont;
+		color: #ccc;
+		// User property color
+		&.user-prop-color { color: #fff; }
+		&.user-placeholder-color { color: #eee; }
+	}
+	p {
+		font-family: $secondaryFont;
+		color: #fff;
+	}	
+	input,
+	textarea {
+		@include ledPlaceholderColor(#666);
+		border-radius: 0;
+		color: #111 !important;
+		&:focus { outline: 1px solid $primaryColor; }
+	}
+	input { font-family: $primaryFont; }
+	textarea { font-family: $secondaryFont; }
+	span {
+		padding: {
+			top: .2rem;
+			left: .1rem;
+		}
+		font-family: $secondaryFont;
+		color: #fff;
+	}
+	button {
+		@include ledButton(#fff, $primaryColor);
+		display: block;
+		margin: {
+			top: auto;
+			right: auto;
+			left: auto;
+		}
+		&.ng-disabled {
+			color: #666;
+			border-color: #666;
+		}
+	}
+}
+
+// Preventing animation issues for form elements
+
+.form-animation.ng-hide.ng-hide-animate {
+	display: none !important;	
+}

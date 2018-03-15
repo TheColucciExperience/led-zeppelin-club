@@ -24,6 +24,7 @@ angular.module(
 		'ledBackground',
 		'ledNavbar',
 		'ledFooter',
+		'ledCarousel',
 		'ledCard',
 		'ledAlbum',
 
@@ -37,13 +38,14 @@ angular.module(
 
 		'item',
 
-		// ** Partials and specific components
+		// ** Partials
 
 		'register',
 		'home',
 		'detail',
 		'albums',
-		'ledCarousel'
+		'profile'
+		
 
 	]
 )

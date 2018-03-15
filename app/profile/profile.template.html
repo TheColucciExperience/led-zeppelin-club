@@ -1,0 +1,104 @@
+<div class="page-container">
+
+	<h2 class="sr-only">Led Zeppelin Club - User Profile Page</h2>
+
+	<led-navbar></led-navbar>
+
+	<main class="profile-box row no-gutters">
+
+		<h3 class="sr-only">User Profile</h3>
+
+		<div class="profile-img-box col-12 col-md-4">
+			<img src="app/images/user/default-user.jpg"/>				
+			<h4 ng-hide="profile.states.editing">
+				{{ profile.model.masterUser.title }}
+			</h4>
+		</div>
+
+		<form name="userForm" class="col-12 col-sm-9 col-md-7 col-lg-6" 
+		novalidate ng-submit="profile.updateUser()">
+
+			<div class="mb-3">
+				
+				<div class="form-group">
+					<h5>
+						<span ng-show="profile.states.editing">*</span>Name:
+					</h5>
+					<h5 class="user-prop-color form-animation" 
+					ng-hide="profile.states.editing">
+						{{ profile.model.masterUser.username }}
+					</h5>
+					<label class="sr-only" for="userName">Insert your username</label>
+					<input id="userName" class="form-control form-animation" 
+					type="text" name="userName" placeholder="Username" 
+					ng-show="profile.states.editing" 
+					ng-model="profile.model.localUser.username"
+					ng-model-options="{ updateOn: 'blur' }"	required/>
+					<span ng-show="userForm.userName.$touched &&
+					userForm.userName.$error.required && profile.states.editing">
+						**username is required
+					</span>
+				</div>
+
+				<div class="form-group">
+					<h5>Title:</h5>
+					<h5 class="user-prop-color" ng-hide="profile.states.editing">
+						{{ profile.model.masterUser.title }}
+					</h5>
+					<h5 class="user-placeholder-color form-animation"
+					ng-hide="profile.model.masterUser.title || profile.states.editing">
+						No Title
+					</h5>
+					<label class="sr-only" for="userTitle">
+						Insert your user title (optional)
+					</label>
+					<input id="userTitle" class="form-control form-animation" 
+					type="text" name="userTitle" placeholder="Title" 
+					ng-model="profile.model.localUser.title"
+					ng-show="profile.states.editing"/>
+				</div>
+
+				<div class="form-group">
+					<h5>Description:</h5>
+					<h5 class="user-placeholder-color"
+					ng-hide="profile.model.masterUser.description || 
+					profile.states.editing">
+						No Description
+					</h5>
+					<p class="form-animation" ng-hide="profile.states.editing">
+						{{ profile.model.masterUser.description }}
+					</p>
+					<label class="sr-only" for="userDescription">
+						Give us a cool description about yourself (optional)
+					</label>
+					<textarea id="userDescription" class="form-control form-animation" 
+					name="userDescription" ng-show="profile.states.editing"
+					placeholder="Give us a cool description about yourself"
+					ng-model="profile.model.localUser.description"></textarea>
+				</div>
+
+			</div>
+
+			<div class="d-flex justify-content-around flex-wrap">
+				<button class="form-animation" ng-hide="profile.states.editing" 
+				ng-click="profile.changeEditingState()" type="button">
+					Edit Profile
+				</button>
+				<button class="form-animation" type="button" 
+				ng-show="profile.states.editing" ng-click="profile.cancelEdit()">
+					Cancel
+				</button>
+				<button  type="submit" ng-disabled="userForm.$invalid"
+				ng-class="{ 'button-disabled': userForm.$invalid, 
+				'form-animation': true }" ng-show="profile.states.editing">
+					Save
+				</button>
+			</div>			
+
+		</form>
+		
+	</main>
+
+	<led-footer></led-footer>
+	
+</div>
